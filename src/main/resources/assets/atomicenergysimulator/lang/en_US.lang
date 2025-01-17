@@ -1,0 +1,25 @@
+# < ----------- Generic Items ----------- >
+item.sun_simulator.name=§dElemento de Sakuradite
+
+# < ----------- Generic tools ----------- >
+item.astral_pickaxe.name=§d§l✦   §a§lAstral PickAxe   §d§l✦
+
+# < ----------- Generic Blocks ----------- >
+tile.quad_solar_array.name=§eQuad SolarArray
+
+# < ----------- Generic Armors ----------- >
+item.nanoum_helmet.name=§5Capacete de Nanoum
+
+# < ----------- Generic Texts ----------- >
+relics.charmoftime1.death.text=§aVoce foi salvo da morte!§6 Charm Of Time I foi ativado.
+
+# < ----------- Generic Menus ----------- >
+itemGroup.blocksAndItems=AtomicEnergy Simulator Blocks & Items
+
+# < ----------- Generic Containers ----------- >
+
+container.sun_simulator=Sun Simulator
+
+# < ----------- Generic Texts ----------- >
+
+# < ----------- InfoHelper ----------- >

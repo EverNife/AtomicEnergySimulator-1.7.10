@@ -1,0 +1,10 @@
+[
+  {
+    "modid": "atomicenergysimulator",
+    "name": "AtomicEnergySimulator",
+    "description": "AtomicEnergy Simulator its a mod created for the FinalCraft Network",
+    "version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
+    "authorList": ["EverNife"]
+  }
+]

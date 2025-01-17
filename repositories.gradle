@@ -1,0 +1,13 @@
+// Add any additional repositories for your dependencies here.
+
+repositories {
+    flatDir { //Change this to where are your local libs
+        dirs 'C:/Users/Petrus/Desktop/Meus/workshop/workshop/MyOwnPlugins/Bukkit/FinalCraftCore/libs'
+        dirs 'C:/Users/Petrus/Desktop/Meus/workshop/workshop/PublicLibs'
+        dirs 'C:/Users/Petrus/Desktop/Meus/workshop/workshop/PublicLibs/Bukkit'
+    }
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url = "https://maven.petrus.dev/public" }
+    maven { url = "https://jitpack.io" }
+}
