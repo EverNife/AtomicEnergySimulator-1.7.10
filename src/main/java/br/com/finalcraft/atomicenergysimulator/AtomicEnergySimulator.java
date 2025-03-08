@@ -16,12 +16,11 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = MainStrings.MOD_ID,
         name = MainStrings.MODNAME,
         version = MainStrings.MODVERSION,
-        dependencies = "after:AWWayofTime;after:DraconicEvolution;after:TConstruct;after:EventHelper")
+        dependencies = "after:EventHelper")
 
 public class AtomicEnergySimulator {
 
-    public static CreativeTabs tabBlocksItems = new CustomCreativeTab(CreativeTabs.getNextID(), MainStrings.MOD_ID, "blocksAndItems", 1);
-    public static CreativeTabs tabToolsArmors = new CustomCreativeTab(CreativeTabs.getNextID(), MainStrings.MOD_ID, "toolsAndArmors", 2);
+    public static CreativeTabs tabBlocksItems = new CustomCreativeTab(CreativeTabs.getNextID(), MainStrings.MOD_ID, MainStrings.MODNAME + ".BlocksAndItems", 1);
 
     public static Logger logger;
     @Instance

@@ -34,7 +34,7 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:+:dev")
+//    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:+:dev")
 
     compileOnly "com.github.GTNewHorizons:EnderCore:+:dev"
     compileOnly "com.github.GTNewHorizons:EnderIO:+:dev"

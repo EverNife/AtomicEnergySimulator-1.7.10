@@ -12,6 +12,7 @@ public interface FCTileEntity {
     public static List<FCTileEntity> allFcTileEntities = new ArrayList<>();
 
     public static void registerTileEntities(){
+        allFcTileEntities.add(new TileSolarArray());
         allFcTileEntities.add(new TileSolarQuadArray());
 
         FCTileEntity.allFcTileEntities.forEach(fcTileEntity -> {

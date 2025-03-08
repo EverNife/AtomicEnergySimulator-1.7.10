@@ -1,8 +1,8 @@
 package br.com.finalcraft.atomicenergysimulator.client.gui;
 
 import br.com.finalcraft.atomicenergysimulator.client.render.meta.FCTexture;
-import br.com.finalcraft.atomicenergysimulator.common.container.ContainerQuadSolarArray;
-import br.com.finalcraft.atomicenergysimulator.common.tiles.TileSolarQuadArray;
+import br.com.finalcraft.atomicenergysimulator.common.container.ContainerSolarArray;
+import br.com.finalcraft.atomicenergysimulator.common.tiles.TileSolarArray;
 import br.com.finalcraft.atomicenergysimulator.refer.MainStrings;
 import com.enderio.core.client.gui.widget.GuiToolTip;
 import com.enderio.core.client.render.ColorUtil;
@@ -15,10 +15,10 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
-public class GuiSolarQuadArray extends GuiPoweredMachineBase<TileSolarQuadArray> {
+public class GuiSolarArray extends GuiPoweredMachineBase<TileSolarArray> {
 
     private static final FCTexture BACKGROUND = new FCTexture(
-        new ResourceLocation(MainStrings.MOD_ID, "textures/gui/solar_quad_array.png"),
+        new ResourceLocation(MainStrings.MOD_ID, "textures/gui/solar_array.png"),
         704,
         664,
         0,
@@ -61,16 +61,16 @@ public class GuiSolarQuadArray extends GuiPoweredMachineBase<TileSolarQuadArray>
         }
     );
 
-    private ContainerQuadSolarArray c;
+    private ContainerSolarArray c;
 
-    public GuiSolarQuadArray(InventoryPlayer inventoryPlayer, TileSolarQuadArray machine) {
-        super(machine, new ContainerQuadSolarArray(inventoryPlayer, machine));
-        this.c = (ContainerQuadSolarArray) inventorySlots;
+    public GuiSolarArray(InventoryPlayer inventoryPlayer, TileSolarArray machine) {
+        super(machine, new ContainerSolarArray(inventoryPlayer, machine));
+        this.c = (ContainerSolarArray) inventorySlots;
 
         Rectangle r = new Rectangle(c.getUpgradeOffset(), new Dimension(16, 16));
         ttMan.addToolTip(
             new GuiToolTip(
-                new Rectangle(c.getUpgradeOffset(), new Dimension(16, 16)),
+                new Rectangle(  c.getUpgradeOffset(), new Dimension(16, 16)),
                 "Melhorar Bateria Interna",
                 "§7Quanto maior for o capacitor, maior será bateria!"
             ) {

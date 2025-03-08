@@ -4,7 +4,6 @@ import br.com.finalcraft.atomicenergysimulator.common.COREBlocks;
 import br.com.finalcraft.atomicenergysimulator.common.items.ItemSolarCell;
 import com.enderio.core.api.common.util.IProgressTile;
 import com.enderio.core.common.util.BlockCoord;
-import cpw.mods.fml.common.FMLLog;
 import crazypants.enderio.machine.SlotDefinition;
 import crazypants.enderio.machine.generator.AbstractGeneratorEntity;
 import crazypants.enderio.power.BasicCapacitor;
@@ -15,18 +14,18 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileSolarQuadArray extends AbstractGeneratorEntity implements ISidedInventory, IProgressTile, FCTileEntity {
+public class TileSolarArray extends AbstractGeneratorEntity implements ISidedInventory, IProgressTile, FCTileEntity {
 
     private PowerDistributor powerDis;
-    private static final int SOLAR_COUNT = 4;
+    private static final int SOLAR_COUNT = 1;
 
-    public TileSolarQuadArray() {
+    public TileSolarArray() {
         super(new SlotDefinition(SOLAR_COUNT,0));
     }
 
     @Override
     public String getTileRegistryName() {
-        return Block.blockRegistry.getNameForObject(COREBlocks.quadSolarArray);
+        return Block.blockRegistry.getNameForObject(COREBlocks.solarArray);
     }
 
 //    @SideOnly(Side.CLIENT)
@@ -108,15 +107,15 @@ public class TileSolarQuadArray extends AbstractGeneratorEntity implements ISide
     }
 
 
-    long lastCalculationTime = 0;
+    long lastCalculationEnergyTime = 0;
     int lastCalculationEnergy = 0;
     public int calculateEnergyGenereatedPerTick(){
 
-        if (worldObj.getTotalWorldTime() - lastCalculationTime < 20){
+        if (worldObj.getTotalWorldTime() - lastCalculationEnergyTime < 20){
             return lastCalculationEnergy;
         }
 
-        lastCalculationTime = worldObj.getTotalWorldTime();
+        lastCalculationEnergyTime = worldObj.getTotalWorldTime();
         lastCalculationEnergy = 0;
         for (int i = 0; i < SOLAR_COUNT; i++) {
             lastCalculationEnergy += calculateEnergyFromStack(inventory[i]);

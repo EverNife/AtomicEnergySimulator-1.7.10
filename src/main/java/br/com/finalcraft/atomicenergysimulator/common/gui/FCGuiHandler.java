@@ -10,8 +10,6 @@ import java.util.Map;
 
 public class FCGuiHandler implements IGuiHandler {
 
-    public static final int GUI_ID_QUAD_SOLAR_ARRAY = 1;
-
     public static final Map<Integer, IGuiHandler> guiHandlers = new HashMap<Integer, IGuiHandler>();
 
     public static void registerGuiHandler(int id, IGuiHandler handler) {
@@ -47,7 +45,8 @@ public class FCGuiHandler implements IGuiHandler {
     }
 
     public static enum GuiIdentifiers{
-        QUAD_SOLAR_ARRAY(1),
+        SOLAR_ARRAY(1),
+        QUAD_SOLAR_ARRAY(2),
         ;
 
         private final int ID;

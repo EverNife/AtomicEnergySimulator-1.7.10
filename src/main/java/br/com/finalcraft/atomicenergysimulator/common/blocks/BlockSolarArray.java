@@ -1,10 +1,10 @@
 package br.com.finalcraft.atomicenergysimulator.common.blocks;
 
 import br.com.finalcraft.atomicenergysimulator.AtomicEnergySimulator;
-import br.com.finalcraft.atomicenergysimulator.client.gui.GuiSolarQuadArray;
-import br.com.finalcraft.atomicenergysimulator.common.container.ContainerQuadSolarArray;
+import br.com.finalcraft.atomicenergysimulator.client.gui.GuiSolarArray;
+import br.com.finalcraft.atomicenergysimulator.common.container.ContainerSolarArray;
 import br.com.finalcraft.atomicenergysimulator.common.gui.FCGuiHandler;
-import br.com.finalcraft.atomicenergysimulator.common.tiles.TileSolarQuadArray;
+import br.com.finalcraft.atomicenergysimulator.common.tiles.TileSolarArray;
 import br.com.finalcraft.atomicenergysimulator.common.util.ItemCreatorHelper;
 import br.com.finalcraft.atomicenergysimulator.refer.MainStrings;
 import crazypants.enderio.ModObject;
@@ -13,13 +13,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class BlockSolarQuadArray extends AbstractMachineBlock<TileSolarQuadArray> {
+public class BlockSolarArray extends AbstractMachineBlock<TileSolarArray> {
 
-    public static final ModObject ModObject_quadSolarArray = EnumHelper
-        .addEnum(ModObject.class, "quadSolarArray", new Class<?>[0], new Object[0]);
+    public static final ModObject ModObject_solarArray = EnumHelper
+        .addEnum(ModObject.class, "solarArray", new Class<?>[0], new Object[0]);
 
-    public BlockSolarQuadArray(String unlocalizedName) {
-        super(ModObject_quadSolarArray, TileSolarQuadArray.class);
+    public BlockSolarArray(String unlocalizedName) {
+        super(ModObject_solarArray, TileSolarArray.class);
 
         this.setBlockName(unlocalizedName);
         this.setCreativeTab(AtomicEnergySimulator.tabBlocksItems);
@@ -30,15 +30,15 @@ public class BlockSolarQuadArray extends AbstractMachineBlock<TileSolarQuadArray
 
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        return new ContainerQuadSolarArray(
+        return new ContainerSolarArray(
             player.inventory,
-            (TileSolarQuadArray) world.getTileEntity(x, y, z)
+            (TileSolarArray) world.getTileEntity(x, y, z)
         );
     }
 
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        return new GuiSolarQuadArray(player.inventory, (TileSolarQuadArray) world.getTileEntity(x, y, z));
+        return new GuiSolarArray(player.inventory, (TileSolarArray) world.getTileEntity(x, y, z));
     }
 
     @Override
@@ -56,27 +56,27 @@ public class BlockSolarQuadArray extends AbstractMachineBlock<TileSolarQuadArray
 
     @Override
     protected String getMachineFrontIconKey(boolean active) {
-        return MainStrings.MOD_ID + ":solar_quad_array/solar_quad_array_side";
+        return MainStrings.MOD_ID + ":solar_array/solar_array_side";
     }
 
     @Override
     protected String getSideIconKey(boolean active) {
-        return MainStrings.MOD_ID + ":solar_quad_array/solar_quad_array_side";
+        return MainStrings.MOD_ID + ":solar_array/solar_array_side";
     }
 
     @Override
     protected String getBottomIconKey(boolean active) {
-        return MainStrings.MOD_ID + ":solar_quad_array/solar_quad_array_bottom";
+        return MainStrings.MOD_ID + ":solar_array/solar_array_bottom";
     }
 
     @Override
     protected String getTopIconKey(boolean active) {
-        return MainStrings.MOD_ID + ":solar_quad_array/solar_quad_array_top";
+        return MainStrings.MOD_ID + ":solar_array/solar_array_top";
     }
 
     @Override
     protected String getBackIconKey(boolean active) {
-        return MainStrings.MOD_ID + ":solar_quad_array/solar_quad_array_side";
+        return MainStrings.MOD_ID + ":solar_array/solar_array_side";
     }
 
     //    @Override
@@ -91,7 +91,7 @@ public class BlockSolarQuadArray extends AbstractMachineBlock<TileSolarQuadArray
 
     @Override
     protected int getGuiId() {
-        return FCGuiHandler.GuiIdentifiers.QUAD_SOLAR_ARRAY.getID();
+        return FCGuiHandler.GuiIdentifiers.SOLAR_ARRAY.getID();
     }
 
 //    @Override

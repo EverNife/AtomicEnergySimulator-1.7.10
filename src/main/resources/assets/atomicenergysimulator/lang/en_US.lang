@@ -1,10 +1,19 @@
 # < ----------- Generic Items ----------- >
-item.sun_simulator.name=§dElemento de Sakuradite
+item.material.golden_iridium_plate.name=Golden Iridium Plate
+item.material.reinforced_irradiator.name=Reinforced Irradiator
+item.material.meta_ender_core.name=META Ender Core
+
+item.solar_cell.x1.name=Solar Cell
+item.solar_cell.x8.name=Solar Cell x8
+item.solar_cell.x64.name=Solar Cell x64
+item.solar_cell.x4096.name=Solar Cell x4096
+
 
 # < ----------- Generic tools ----------- >
 item.astral_pickaxe.name=§d§l✦   §a§lAstral PickAxe   §d§l✦
 
 # < ----------- Generic Blocks ----------- >
+tile.solar_array.name=§eSolarArray
 tile.quad_solar_array.name=§eQuad SolarArray
 
 # < ----------- Generic Armors ----------- >
@@ -14,7 +23,7 @@ item.nanoum_helmet.name=§5Capacete de Nanoum
 relics.charmoftime1.death.text=§aVoce foi salvo da morte!§6 Charm Of Time I foi ativado.
 
 # < ----------- Generic Menus ----------- >
-itemGroup.blocksAndItems=AtomicEnergy Simulator Blocks & Items
+itemGroup.AtomicEnergySimulator.BlocksAndItems=AtomicEnergy Simulator Blocks & Items
 
 # < ----------- Generic Containers ----------- >
 
